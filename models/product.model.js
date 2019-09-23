@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.Types.Schema;
+const Schema = mongoose.Schema;
 
 const ProductSchema = new Schema({
     name: {
@@ -9,11 +9,9 @@ const ProductSchema = new Schema({
     price: {
         type: Number,
         required: true
-    }
+    },
 })
 
 const ProductModel = mongoose.model("Product", ProductSchema, "products")
 
-module.exports = {
-    ProductModel
-}
+module.exports = ProductModel
